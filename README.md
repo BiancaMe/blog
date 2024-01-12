@@ -6,7 +6,7 @@
 
 <!-- MAIN HEADING -->
 
-  <h3><b>My Sheeps Blog</b></h3>
+  <h3><b>My Blog</b></h3>
 
 </div>
 
@@ -31,7 +31,7 @@
   - [📝 License ](#-license-)
 
 <!-- INTRO -->
-# 📖 My Sheeps Blog <a name="about-project"></a>
+# 📖 My Blog <a name="about-project"></a>
 
 > is an classic blog website.You can show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
@@ -69,7 +69,7 @@
 > 
 ```sh
 cd my-sheeps-blog
-https://github.com/BiancaMe/my-sheeps-blog.git
+https://github.com/BiancaMe/blog.git
 ```
 
 <!-- SETUP -->
