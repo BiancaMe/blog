@@ -25,5 +25,3 @@ class Post < ApplicationRecord
     author.decrement!(:posts_counter)
   end
 end
-
-rails g controller users new create
