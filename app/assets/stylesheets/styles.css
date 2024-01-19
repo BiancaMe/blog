@@ -1,6 +1,5 @@
 * {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", Verdana, sans-serif;
   text-decoration: none;
   color: black;
   margin: 10px 0 0 0;
@@ -79,6 +78,7 @@ section {
 .post-item {
   width: 550px;
   padding: 5px;
+  border: 1px solid black;
 }
 
 .post-cont-container {
