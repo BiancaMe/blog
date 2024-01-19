@@ -63,10 +63,6 @@ section {
   padding: 5px;
 }
 
-.post-item {
-  border: 1px solid black;
-}
-
 .posts-list {
   display: flex;
   flex-direction: column;
