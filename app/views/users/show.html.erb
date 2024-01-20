@@ -1,1 +1,36 @@
-<h1>Profile</h1>
+<section id="profile">
+  <h1>Profile </h1>
+  <div class = "user-item">
+    <div class = "user-img-container">
+      <img src="<%= @user.photo %>" />
+    </div>
+    <div class = "user-info">
+        <div class = "user-name-container"><h3><%=@user.name %><h3></div>
+        <div class = "user-cont-container">Number of posts: <%= @user.posts_counter || 0 %></div>
+    </div>
+  </div>
+  <div class="user-bio">
+    <h4>Bio</h4>
+    <div> <%= @user.bio %> </div>
+  </div>
+
+  <ul class="posts-list">
+  <% @user.recents.each do |post| %>
+    <li class ="post-item"> 
+    <%= link_to user_post_path(@user.id, post.id) do %>
+        <h4><%= post.title %></h4>
+      <% end %>
+      <p><%= post.text %></p>
+      <div class="post-cont-container">
+        <span>Comments: <%= post.comments_counter || 0 %> </span>
+        <span> Likes: <%= post.likes_counter || 0 %></span>
+      </div>
+    </li>
+  <% end %>
+  </ul>
+  <button class="all-post" >
+    <%= link_to user_posts_path(@user.id) do %>
+    See all posts
+    <% end %>
+  </button>
+</section>
