@@ -8,6 +8,9 @@
             </div>
         </div>
         <p><%= @post.text %></p>
+        <%= form_with url: "/users/#{@post.author_id}/posts/#{@post.id}/likes" do |form| %>
+        <%= form.submit 'Like' %>
+      <%end%>
     </div>   
     <div class="comments">
         <p> <%= 'There is no comment yet' if @post.comments.length === 0 %></p>
@@ -15,4 +18,9 @@
           <p><%= comment.user.name %> : <%= comment.text %></p>
         <% end %>
     </div>
+    <%= link_to new_user_post_comment_path(current_user, @post) do %>
+        <div>
+        <button>Write a new comment...</button>
+        </div>
+        <% end %>
 </section>

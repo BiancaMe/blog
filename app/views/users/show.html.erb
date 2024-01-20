@@ -13,7 +13,11 @@
     <h4>Bio</h4>
     <div> <%= @user.bio %> </div>
   </div>
-
+  <%= link_to new_user_post_path(current_user) do %>
+    <div> 
+      <button>Write a new post</button>
+    </div>
+  <% end %>
   <ul class="posts-list">
   <% @user.recents.each do |post| %>
     <li class ="post-item"> 
