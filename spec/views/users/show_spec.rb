@@ -24,4 +24,9 @@ RSpec.feature 'User Show', type: :feature do
 
     expect(page).to have_link('See all posts', href: user_posts_path(@user))
   end
+  
+  scenario 'Cliking see all posts go to user s post s index page' do
+    click_link('See all posts')
+    expect(page).to have_current_path(user_posts_path(@user))
+  end
 end
