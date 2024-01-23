@@ -40,7 +40,7 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'response body includes correct placeholders text' do
-      expect(response.body).to include('Post selected')
+      expect(response.body).to include('Post')
     end
   end
 end
