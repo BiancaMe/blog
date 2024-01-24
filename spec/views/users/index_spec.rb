@@ -7,12 +7,14 @@ RSpec.describe 'Users', type: :system do
     @user2 = User.create(name: 'Bianca', photo: '', bio: 'Hello my name is Bianca')
   end
 
-  scenario 'Index' do
+  scenario 'Index, check if the info of user1 and user2 appears' do
     visit users_path
     expect(page).to have_content(@user1.name)
     expect(page).to have_css('img')
     expect(page).to have_content("Number of posts: #{@user1.posts_counter}")
+
     expect(page).to have_content(@user2.name)
+    expect(page).to have_css('img')
     expect(page).to have_content("Number of posts: #{@user2.posts_counter}")
   end
 

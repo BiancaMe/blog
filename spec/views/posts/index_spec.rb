@@ -11,7 +11,7 @@ RSpec.describe 'Posts', type: :system do
     Comment.create(post_id: post.id, user_id: user.id, text: 'studing')
   end
 
-  scenario 'Index' do
+  scenario 'User info' do
     visit user_posts_path(user)
     expect(page).to have_content(user.name)
     expect(page).to have_css('.user-img-container')
@@ -21,6 +21,13 @@ RSpec.describe 'Posts', type: :system do
     expect(page).to have_content('Text1')
     expect(page).to have_content('Comments: 3')
     expect(page).to have_content('Likes: 0')
+    expect(page).to have_content('Hello Melanie, how are you today?')
+    expect(page).not_to have_content('studing')
+  end
+
+  scenario 'See section for pagination' do
+    visit user_posts_path(user)
+    expect(page).to have_content('Pagination')
   end
 
   scenario 'Redirects to show' do

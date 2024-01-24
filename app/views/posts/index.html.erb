@@ -25,7 +25,7 @@
       </div>   
       <div class="comments">
         <p> <%= 'There is no comment yet' if post.comments.length === 0 %></p>
-        <% post.recents.each do |comment| %>
+        <% post.first.each do |comment| %>
           <p><%= comment.user.name %>: <%= comment.text %></p>
         <% end %>
       </div>
