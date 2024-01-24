@@ -11,7 +11,7 @@
   </div>
 
   <ul class="posts-list">
-  <% @user.recents.each do |post| %>
+  <% @posts.each do |post| %>
     <li class ="post-item-container"> 
     <%= link_to user_post_path(@user.id, post.id) do %>
       <div class="post-item">
@@ -25,7 +25,7 @@
       </div>   
       <div class="comments">
         <p> <%= 'There is no comment yet' if post.comments.length === 0 %></p>
-        <% post.recents.each do |comment| %>
+        <% post.first.each do |comment| %>
           <p><%= comment.user.name %>: <%= comment.text %></p>
         <% end %>
       </div>

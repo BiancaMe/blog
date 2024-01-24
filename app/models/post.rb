@@ -13,6 +13,10 @@ class Post < ApplicationRecord
     comments.order(created_at: :desc).limit(limit)
   end
 
+  def first
+    comments.order(created_at: :asc).limit(1)
+  end
+
   private
 
   def increment_counter
