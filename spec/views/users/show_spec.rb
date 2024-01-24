@@ -9,7 +9,6 @@ RSpec.feature 'User Show', type: :feature do
     @post3 = Post.create(author_id: @user.id, title: 'Country live', text: 'Text2')
     @post4 = Post.create(author_id: @user.id, title: 'How are you', text: 'text3')
 
-
     visit user_path(@user)
   end
 
