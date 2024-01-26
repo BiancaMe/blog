@@ -10,5 +10,4 @@ class ApplicationController < ActionController::Base
       u.permit(:name, :bio, :email, :password, :current_password)
     end
   end
-
 end
