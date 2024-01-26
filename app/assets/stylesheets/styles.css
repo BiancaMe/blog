@@ -6,11 +6,19 @@
   list-style: none;
 }
 
+.user-menu {
+  padding: 10px 40px 10px 10px;
+  display: flex;
+  gap: 20px;
+  justify-content: right;
+}
+
 section {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  margin-top: 50px;
 }
 
 .users-list {
@@ -100,4 +108,28 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* Log in */
+.devise-form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+}
+
+.field-item {
+  width: 550px;
+  height: 30px;
+  margin: 10px 0 10px 0;
+}
+
+.remember {
+  width: 550px;
+  text-align: right;
+}
+
+.shared-links {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: blue;
 }
